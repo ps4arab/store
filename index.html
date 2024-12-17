@@ -302,7 +302,18 @@ function checkCookie() {
 				checkCookie();
 			}
     }
+	pkglink = getCookie("pkglink");
 	
+	if (pkglink == "")
+	{
+		document.getElementById("searchbar").setAttribute("onkeyup", "search(\"pkgs.json\")");
+		request("pkgs.json");
+	}
+	else
+	{
+		document.getElementById("searchbar").setAttribute("onkeyup", "search(\""+pkglink+"\")");
+		request(pkglink)
+	}	
 
 }
 
