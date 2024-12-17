@@ -170,7 +170,7 @@ function set_category()
 		document.getElementById("filter_"+i).checked = false;
 	}
 	//document.getElementById("content").hidden = true;
-	//document.getElementById("nav_button").hidden = false;
+	//document.getElementById("nav_button").hidden = true;
 	document.getElementById("filter").hidden = true;
 	document.getElementById("filter_"+ categories.indexOf(category)).checked = true;
 	
@@ -303,18 +303,7 @@ function checkCookie() {
 			}
     }
 	
-	pkglink = getCookie("pkglink");
-	
-	if (pkglink == "")
-	{
-		document.getElementById("searchbar").setAttribute("onkeyup", "search(\"pkgs.json\")");
-		request("pkgs.json");
-	}
-	else
-	{
-		document.getElementById("searchbar").setAttribute("onkeyup", "search(\""+pkglink+"\")");
-		request(pkglink)
-	}
+
 }
 
 function compare(a,b) 
