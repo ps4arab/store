@@ -9,6 +9,7 @@ body {
 	cursor:url(cursor.png), auto;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .sidenav {
@@ -169,7 +170,7 @@ function set_category()
 		document.getElementById("filter_"+i).checked = false;
 	}
 	//document.getElementById("content").hidden = true;
-	//document.getElementById("nav_button").hidden = true;
+	//document.getElementById("nav_button").hidden = false;
 	document.getElementById("filter").hidden = true;
 	document.getElementById("filter_"+ categories.indexOf(category)).checked = true;
 	
